@@ -1,0 +1,24 @@
+.header{
+    @include horizontalFlex;
+    justify-content: space-between;
+    padding-top: 40px;
+    &__logo{
+        width: 210;
+    }
+
+    &__navigation{
+        width: 280px;
+        padding-top: 17px;
+        &__list{
+            @include horizontalFlex;
+            justify-content: space-between;
+            color: $primary-color;
+            font-size: 24px;
+            
+        }
+    }
+}
+
+.nav-active{
+    text-decoration: underline;
+}

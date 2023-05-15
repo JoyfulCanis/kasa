@@ -1,0 +1,51 @@
+//? --------Font-Config------------
+@font-face {
+    font-family: "main-font";
+    src: url(../assets/fonts/Montserrat-Medium.ttf);
+  }
+  
+$main-font: "main-font", sans-serif;
+
+
+//?-------Color-Config------------
+$primary-color: #FE6061;
+$background-color: white;
+
+
+
+
+//?-------Main-Mixin---------
+
+@mixin verticalFlex{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin horizontalFlex{
+    display: flex;
+    flex-direction: row;
+
+}
+
+//?---------General-Config----------
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:$background-color;
+    font-family: $main-font;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
