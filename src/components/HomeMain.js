@@ -1,10 +1,12 @@
 import React from 'react';
 import Banner from './Banner';
+import HomeSection from './HomeSection';
 
 const Main = () => {
     return (
-        <main className='mainHome'>
+        <main className='homeMain'>
             <Banner />
+            <HomeSection />
         </main>
     );
 };

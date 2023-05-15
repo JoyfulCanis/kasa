@@ -2,9 +2,9 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className="mainHome__banner">
-            <div className='mainHome--darken'></div>
-            <span className='mainHome__txt'>Chez vous, partout et ailleurs</span>
+        <div className="homeMain__banner">
+            <div className='homeMain--darken'></div>
+            <span className='homeMain__txt'>Chez vous, partout et ailleurs</span>
 
         </div>
     );

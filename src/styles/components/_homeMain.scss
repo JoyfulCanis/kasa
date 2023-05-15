@@ -1,5 +1,7 @@
-.mainHome{
-    @include horizontalFlex;
+//?-----------------Banner------------------//
+
+.homeMain{
+    @include verticalFlex;
     justify-content:center;
     margin-top: 62px;
     &__banner{
@@ -30,7 +32,12 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        width: 60%;
         z-index: 2;
     }
 
 }
+
+
+//?-----------------------Section----------------------//
+
