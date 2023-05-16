@@ -1,0 +1,22 @@
+.pageNotFound{
+    @include verticalFlex;
+    justify-content: center;
+    align-items: center;
+    color:$primary-color;
+    margin-top: 170px;
+    &__title{
+
+        font-size:288px;
+    }
+
+    &__text{
+        margin-top: 66px;
+        font-size:36px;
+    }
+
+    &__homeLink{
+        margin-top: 182px;
+        font-size: 18px;
+        text-decoration: underline;
+    }
+}

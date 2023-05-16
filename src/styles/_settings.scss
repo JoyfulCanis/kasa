@@ -16,6 +16,11 @@ $background-color: white;
 
 //?-------Main-Mixin---------
 
+@mixin mainPadding{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
 @mixin verticalFlex{
     display: flex;
     flex-direction: column;
@@ -37,8 +42,7 @@ $background-color: white;
 body{
     background:$background-color;
     font-family: $main-font;
-    padding-left: 80px;
-    padding-right: 80px;
+
 }
 
 li{

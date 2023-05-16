@@ -15,7 +15,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Fiche_Logement" element={<HousingForm />} />
+          <Route path="/Fiche_Logement/:id" element={<HousingForm />} />
           <Route path='/About' element={<About />} />
           <Route path='*' element={<PageNotFound />} />
         </Routes>

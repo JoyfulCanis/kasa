@@ -18,7 +18,13 @@ console.log(data)
         <section className='homeSection'>
             <div className='homeSection__cardBox'>
                 {
-                    articleData && articleData.map((item) => <Card key={item.id} cover={item.pictures[0]} h2={item.title} />)
+                    articleData && articleData
+                    .map((item) => 
+                    <Card key={item.id} 
+                    cover={item.pictures[0]} 
+                    h2={item.title} 
+                    urlId={item.id}
+                    />)
                     
                 }
             </div>
