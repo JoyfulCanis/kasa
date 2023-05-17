@@ -4,9 +4,7 @@
     @include mainPadding;
     @include verticalFlex;
     justify-content:center;
-    &__banner{
-        background-image: url("../../../public/banner.png");
-    }
+    
     &--darken{
         position: absolute;
         background-color: rgba(0, 0, 0, 0.16);
@@ -19,7 +17,7 @@
     &__title{
         position:absolute;
         color: white;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 48px;
         text-align: center;
         left: 50%;

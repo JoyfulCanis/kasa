@@ -7,8 +7,7 @@ import Footer from '../components/Footer';
 const Home = () => {
 
     const location = useLocation();
-    console.log(location.pathname)
-    console.log(location.pathname.includes("About")? "TRUE":"FALSE")
+
     return (
         <div>
             <Header />

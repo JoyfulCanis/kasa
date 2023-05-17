@@ -1,0 +1,52 @@
+.housingMain{
+    @include mainPadding;
+    @include verticalFlex;
+    justify-content:center;
+
+
+    &__imgContainer{
+        position:relative;
+        height: 415px;
+        
+    }
+    &__img{
+        position: absolute;
+        border-radius: 25px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+
+    }
+
+
+    &__chevron--left, &__chevron--right{
+        position: absolute;
+        z-index: 2;
+        bottom: 180px;
+        cursor: pointer;
+        background:rgba($color: #000000, $alpha: 0);
+        border: none;
+        
+
+    }
+    &__chevron--left{
+        left:23px;
+    }
+    &__chevron--right{
+
+        transform: rotate(180deg);
+        right: 23px;
+    }
+    &__chevron-img{
+        height: 80px;
+    }
+
+    &__imgIndex{
+        position: absolute;
+        z-index: 2;
+        bottom: 25px;
+        left: 49%;
+        color: white;
+    }
+}

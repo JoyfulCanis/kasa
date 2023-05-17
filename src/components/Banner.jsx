@@ -2,14 +2,13 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 
 const Banner = ({ location }) => {
-    const isLocationTrue = location.pathname.includes("About");
-
+    const whatIsLocation = location.pathname.split("/")[1].toLowerCase();
     return (
-
-        <div className={isLocationTrue ? "aboutMain__banner banner" : "homeMain__banner banner"}>
+        
+        <div className={"banner banner__"+ whatIsLocation}>
             <div className={'homeMain--darken'}></div>
             {
-                isLocationTrue
+                whatIsLocation
                     ? null
                     :<h1 className='homeMain__title'>Chez vous, partout et ailleurs</h1>
             }

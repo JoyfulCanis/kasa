@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import data from '../assets/data/db.json'
 import Card from './Card';
 const HomeSection = () => {
@@ -12,7 +12,6 @@ const HomeSection = () => {
     // }
     // useEffect(() => getData(), [])
     //! A implémenter et à configurer lors du déploiement du back, ne pas oublier de changer la const du dessus//
-console.log(data)
 
     return (
         <section className='homeSection'>

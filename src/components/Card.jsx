@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Card = ({ h2, cover, urlId }) => {
-    console.log(h2)
+
     const urlLinkCode = `Fiche_Logement/${urlId}`;
     return (
 

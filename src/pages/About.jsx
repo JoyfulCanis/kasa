@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from '../components/Header';
 import { useLocation } from 'react-router-dom';
-import Banner from '../components/Banner';
 import AboutMain from '../components/AboutMain';
+import Footer from '../components/Footer';
 
 const About = () => {
 
@@ -12,6 +12,8 @@ const About = () => {
         <div>
             <Header />
             <AboutMain location={location} />
+            <Footer />
+        
         </div>
     );
 };

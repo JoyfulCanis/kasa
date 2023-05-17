@@ -1,7 +1,7 @@
 .homeSection{
     margin-top: 43px;
     padding:56px 50px 56px 50px;
-    background: #F7F7F7;
+    background: $secondary-color;
     border-radius: 25px;
     &__cardBox{
 
@@ -50,7 +50,7 @@
         &__title{
             position: absolute;
             z-index: 2;
-            font-weight: 400;
+            font-weight: 500;
             color: white;
             font-size: 18px;
             left: 5.88%;
