@@ -11,7 +11,9 @@ const HousingFormMain = () => {
     const selectedApartment = apartmentData.find(apartment => apartment.id === urlId)
     const apartmentImg = selectedApartment.pictures
     const [actualImgIndex, setActualImgIndex] = useState(0)
-    console.log(actualImgIndex)
+
+    console.log(selectedApartment)
+
     return (
         <main className='housingMain'>
             <div className='housingMain__imgContainer'>
@@ -43,6 +45,18 @@ const HousingFormMain = () => {
                 <span className='housingMain__imgIndex'>{`${actualImgIndex + 1}/${apartmentImg.length}`}</span>
 
             </div>
+            
+            <div>
+                <h1>{selectedApartment.title}</h1>
+                <address>{selectedApartment.location}</address>
+            </div>
+            <div>
+                <p>{selectedApartment.host.name}</p>
+                <div>
+                    <img src={selectedApartment.host.picture} alt={selectedApartment.host.name} />
+                </div>
+            </div>
+
         </main>
     );
 };
