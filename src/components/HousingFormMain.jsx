@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Carousel from './Carousel';
 import HousingGeneralInfos from './HousingGeneralInfos';
+import HousinsMoreInfos from './HousingMoreInfos';
 
 const HousingFormMain = ({selectedApartment}) => {
-
 
     
 
@@ -14,6 +14,7 @@ const HousingFormMain = ({selectedApartment}) => {
             <section>
                 <Carousel selectedApartment={selectedApartment}/>
                 <HousingGeneralInfos selectedApartment={selectedApartment} />
+                <HousinsMoreInfos selectedApartment={selectedApartment} />
                 
             </section>
 

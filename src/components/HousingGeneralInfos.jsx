@@ -51,6 +51,7 @@ const HousingGeneralInfos = ({ selectedApartment }) => {
                 <Stars fullStars={fullStars}/>
 
             </div>
+
         </div>
     );
 };

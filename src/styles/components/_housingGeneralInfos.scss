@@ -69,3 +69,21 @@
 .star{
     margin-left: 15px;
 }
+
+.housing__moreInfos{
+    @include horizontalFlex;
+    justify-content: space-between;
+    margin-top: 24px;
+    & > li{
+        width: 45%;
+        & > p{
+            font-size: 18px;
+            padding-top: 30px;
+        }
+    }
+    
+    &__height{
+        height: 249px;
+    }
+
+}

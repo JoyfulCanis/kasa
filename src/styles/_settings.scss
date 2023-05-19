@@ -43,6 +43,20 @@ $background-color: white;
 
 }
 
+//?------Breakpoints-Mixin------
+
+$breakpoints:(
+    large:992px
+);
+
+@mixin breakpoint($name){
+    @if map-has-key($breakpoints, $name){
+        @media (max-width: map-get($breakpoints, $name)){
+            @content;
+        }
+    }
+}
+
 //?---------General-Config----------
 *{
     padding: 0;

@@ -1,28 +1,36 @@
-.header{
+.header {
     @include mainPadding;
     @include horizontalFlex;
     justify-content: space-between;
     padding-top: 40px;
     max-width: 1400px;
     margin: auto;
-    &__logo{
+
+
+
+    &__logo {
         width: 210;
+
     }
 
-    &__navigation{
+    &__navigation {
         width: 280px;
         padding-top: 17px;
-        &__list{
+
+
+        &__list {
             @include horizontalFlex;
             justify-content: space-between;
             color: $primary-color;
             font-size: 24px;
             font-weight: 500;
-            
+
         }
     }
 }
 
-.nav-active{
+
+
+.nav-active {
     text-decoration: underline;
 }

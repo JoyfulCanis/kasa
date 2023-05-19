@@ -20,3 +20,12 @@
     background-position-y: -200px;
   
 }
+
+.homeMain--darken{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.16);
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    z-index: 1;
+}
