@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import displayChevron from "../assets/images/icons/display-chevron.svg"
 
 const AboutListElement = ({ title, content }) => {
 
@@ -16,7 +16,7 @@ const AboutListElement = ({ title, content }) => {
                 }
                     className={isButtonActive ? 'aboutList__element__button aboutList__element__button--active' : 'aboutList__element__button'}>
 
-                    <img className='aboutList__element__button-img' src="/vector.png" alt="chevron pour dérouler du texte" />
+                    <img className='aboutList__element__button-img' src={displayChevron} alt="chevron pour dérouler du texte" />
 
 
                 </button>

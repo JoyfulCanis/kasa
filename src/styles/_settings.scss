@@ -64,3 +64,20 @@ a{
     color: inherit;
     text-decoration: none;
 }
+
+
+
+::-webkit-scrollbar {
+    width: 12px; /* Largeur de la barre de défilement */
+
+    &-track {
+        background: #cbcbcb; /* Couleur de fond de la piste */
+    }
+    &-thumb {
+        background: $primary-color;
+        &:hover {
+            background: lighten($primary-color, 5%); /* Couleur de la poignée de défilement lorsque la souris est dessus */
+            
+        }
+    }
+}

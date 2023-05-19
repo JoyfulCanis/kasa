@@ -3,6 +3,8 @@
     @include horizontalFlex;
     justify-content: space-between;
     padding-top: 40px;
+    max-width: 1400px;
+    margin: auto;
     &__logo{
         width: 210;
     }

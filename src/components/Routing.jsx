@@ -8,8 +8,7 @@ import HousingForm from '../pages/HousingForm';
 import About from '../pages/About';
 import PageNotFound from '../pages/PageNotFound';
 
-
-const App = () => {
+const Routing = () => {
   return (
     <div>
       <BrowserRouter>
@@ -25,4 +24,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Routing;

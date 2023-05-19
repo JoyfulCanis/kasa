@@ -4,11 +4,10 @@
     background: $secondary-color;
     border-radius: 25px;
     &__cardBox{
-
-
         @include horizontalFlex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
+
     }
     &__card{
         position: relative;
@@ -17,7 +16,7 @@
         border-radius: 10px;
         overflow: hidden;
         z-index: 0;
-        margin-bottom: 50px;
+        margin-bottom:50px;
         transition: 0.15s ease-in;
 
         &:hover{
