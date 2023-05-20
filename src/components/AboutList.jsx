@@ -15,7 +15,8 @@ const AboutList = () => {
                         (element) => (
                             <AboutListElement key={element.title}
                                 title={element.title}
-                                content={element.content} />
+                                content={element.content}
+                                isHousing={false} />
                         )
                     )
                 }

@@ -1,10 +1,15 @@
 .aboutList {
     padding: 33px 108px 0px 108px;
+    @include verticalFlex;
+
+    @include mobile-only {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     &__element {
-        margin-bottom: 33px;
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: 33px;
 
         &__headBox {
             position: relative;
@@ -23,6 +28,10 @@
             font-family: $secondary-font;
             font-weight: 400;
             font-size: 24px;
+
+            @include mobile-only {
+                font-size: 13px;
+            }
         }
 
         &__button {
@@ -42,22 +51,45 @@
         &__text {
             margin-top: -60px;
             overflow: hidden;
-            padding: 27px 27px 19px 18px;
             font-family: $secondary-font;
             font-weight: 400;
             transition: 0.2s ease-in;
             color: $background-color;
             border-radius: 5px;
+            font-size: 24px;
             color: $background-color;
+            padding: 27px 27px 19px 18px;
+            opacity: 0;
+
+            @include mobile-only {
+                font-size: 12px;
+            }
 
         }
 
         &__text--visible {
             margin-top: 0;
             overflow: visible;
-            font-size: 24px;
             background: $secondary-color;
             color: $primary-color;
+            opacity: 1;
+
+        }
+
+        &__paragraphText {
+            max-height: 0;
+            opacity: 0;
+            transition: 0.2ms ease-in;
+        }
+
+        &__paragraphText--active {
+            max-height: 500px;
+            opacity: 1;
+            transition: 0.2ms ease-in;
+
+            @include mobile-only {
+                max-height: 1000px;
+            }
         }
     }
 }

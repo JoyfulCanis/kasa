@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import displayChevron from "../assets/images/icons/display-chevron.svg"
 
-const AboutListElement = ({ title, content }) => {
+const AboutListElement = ({ title, content, isHousing }) => {
 
     const [isButtonActive, setIsButtonActive] = useState(false)
     return (
@@ -21,19 +21,27 @@ const AboutListElement = ({ title, content }) => {
                 </button>
 
             </div>
-            {
-                <p className={`aboutList__element__text ${isButtonActive ? 'aboutList__element__text--visible' : ''} ${Array.isArray(content)?"housing__moreInfos__height":""}`}>
-                    {Array.isArray(content) ?
-                        <ul>{
-                            content.map((element) => (
-                                <li key={element}>{element}</li>
-                            ))}
-                        </ul>
-                        :
-                        content
-                    }
-                </p>
-            }
+
+            <div className={`aboutList__element__text ${isButtonActive ? 'aboutList__element__text--visible' : ''}`}>
+                {Array.isArray(content) && content.length > 1 ? (
+                    <ul className="housing__moreInfos__height">
+                        {content.map((element) => (
+                            <li key={element}>{element}</li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p className={Array.isArray(content)
+                        ? "housingHeight" :
+                        `aboutList__element__paragraphText 
+                         ${isButtonActive ? "aboutList__element__paragraphText--active" : ""}
+                         ${isHousing ? " housingHeight" : ""}`
+
+                    }>
+                        {content}
+                    </p>
+                )}
+            </div>
+
 
         </li>
 

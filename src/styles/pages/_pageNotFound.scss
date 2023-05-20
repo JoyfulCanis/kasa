@@ -9,16 +9,27 @@
     &__title{
 
         font-size:288px;
+        @include mobile-only{
+            font-size: 96px;
+        }
     }
 
     &__text{
         margin-top: 66px;
         font-size:36px;
+        text-align: center;
+        @include mobile-only{
+            font-size: 18px;
+        }
     }
 
     &__homeLink{
         margin-top: 182px;
         font-size: 18px;
         text-decoration: underline;
+        text-align: center;
+        @include mobile-only{
+            font-size: 14px;
+        }
     }
 }

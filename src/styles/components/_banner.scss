@@ -9,10 +9,15 @@
     position: relative;
     z-index: 0;
     margin-top: 62px;
+    
 }
 .banner__{
     background-image: url("../../../public/banner-home.jpg");
     background-position-y:-320px;
+    @include mobile-only{
+        height: 111px;
+        margin-top:0;
+    }
 }
 
 .banner__about{
@@ -21,11 +26,41 @@
   
 }
 
-.homeMain--darken{
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.16);
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
-    z-index: 1;
+.homeMain {
+    @include mainPadding;
+    @include verticalFlex;
+    justify-content: center;
+    max-width: 1440px;
+    margin: auto;
+    @include mobile-only{
+        padding: 20px;
+    }
+
+    &--darken{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.16);
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        z-index: 1;
+    }
+
+
+    &__title {
+        position: absolute;
+        color: white;
+        font-weight: 500;
+        font-size: 48px;
+        text-align: center;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        z-index: 2;
+        @include mobile-only{
+            font-size:24px;
+            text-align: left;
+        }
+    }
+
 }

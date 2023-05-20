@@ -45,16 +45,12 @@ $background-color: white;
 
 //?------Breakpoints-Mixin------
 
-$breakpoints:(
-    large:992px
-);
+$breakpoint-mobile: 768px;
 
-@mixin breakpoint($name){
-    @if map-has-key($breakpoints, $name){
-        @media (max-width: map-get($breakpoints, $name)){
-            @content;
-        }
-    }
+@mixin mobile-only {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
 }
 
 //?---------General-Config----------

@@ -22,33 +22,34 @@ const HousingGeneralInfos = ({ selectedApartment }) => {
 
                     <h1 className='housingForm__generalInfos__title'>{title}</h1>
                     <address className='housingForm__generalInfos__address'>{location}</address>
+                    <div className='housingForm__generalInfos__tagContainer'>
+                        {
+                            tags &&
+                            tags.map((tag) =>
+                                <span className='housingForm__generalInfos__tag' key={tag}>{tag}</span>
+                            )
+                        }
+                    </div>
 
                 </div>
 
                 <div className='housingForm__generalInfos__right'>
+                    <div className='housingForm__generalInfos__nameAndPic'>
+                        <p className='housingForm__generalInfos__name'>
+                            {firstName}<br />{lastName}</p>
 
-                    <p className='housingForm__generalInfos__name'>
-                        {firstName}<br />{lastName}</p>
-
-                    <div className='housingForm__generalInfos__profilePicContainer'>
-                        <img className='housingForm__generalInfos__profilePic'
-                            src={hostPicture} alt={firstName + " " + lastName} />
+                        <div className='housingForm__generalInfos__profilePicContainer'>
+                            <img className='housingForm__generalInfos__profilePic'
+                                src={hostPicture} alt={firstName + " " + lastName} />
+                        </div>
                     </div>
+                    <Stars fullStars={fullStars} />
 
                 </div>
 
             </div>
             <div className='housingForm__generalInfos__tagsAndStars'>
-                <div className='housingForm__generalInfos__tagContainer'>
-                    {
-                        tags &&
-                        tags.map((tag) =>
-                            <span className='housingForm__generalInfos__tag' key={tag}>{tag}</span>
-                        )
-                    }
-                </div>
 
-                <Stars fullStars={fullStars}/>
 
             </div>
 

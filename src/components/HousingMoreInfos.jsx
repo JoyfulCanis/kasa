@@ -8,7 +8,7 @@ const HousinsMoreInfos = ({ selectedApartment }) => {
         <ul className='housing__moreInfos'>
             {data.map(
                 (element) => (
-                    <AboutListElement key={element[0]} title={(element[0])} content={element.slice(1)} />
+                    <AboutListElement key={element[0]} title={(element[0])} content={element.slice(1)} isHousing={true} />
                 )
             )}
 

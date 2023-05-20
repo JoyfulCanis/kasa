@@ -5,17 +5,28 @@
     padding-top: 40px;
     max-width: 1400px;
     margin: auto;
-
+    @include mobile-only{
+        padding: 20px 20px 0px 20px;
+    }
 
 
     &__logo {
-        width: 210;
+        width: 10px;
+        &-img{
+            @include mobile-only{
+                width: 145px;
+            }
+        }
 
     }
 
     &__navigation {
         width: 280px;
         padding-top: 17px;
+        @include mobile-only{
+            padding-top: 18px;
+            width: auto
+        }
 
 
         &__list {
@@ -24,6 +35,10 @@
             color: $primary-color;
             font-size: 24px;
             font-weight: 500;
+            & a{@include mobile-only{
+                font-size: 12px;
+                padding-left: 10px;
+            }}
 
         }
     }
