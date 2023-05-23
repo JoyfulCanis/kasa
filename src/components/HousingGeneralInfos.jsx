@@ -1,8 +1,13 @@
 import React from 'react';
+
+//?componenets import
 import Stars from './Stars';
 
-const HousingGeneralInfos = ({ selectedApartment }) => {
 
+//This component includes general information about the apartment, such as its location, tags, the name and picture of the host, and so on.
+
+const HousingGeneralInfos = ({ selectedApartment }) => {
+    //creating this in order to avoid messy code
     const title = selectedApartment.title;
     const location = selectedApartment.location;
     const firstName = selectedApartment.host.name.split(" ")[0];
@@ -11,17 +16,20 @@ const HousingGeneralInfos = ({ selectedApartment }) => {
     const tags = selectedApartment.tags;
     const fullStars = selectedApartment.rating;
 
-    console.log(selectedApartment)
     return (
 
 
         <div>
-            <div className='housingForm__generalInfos'>
 
+            <div className='housingForm__generalInfos'>
+                {/*--------------This is the LEFT PART of general informations in the page--------------*/}
                 <div className='housingForm__generalInfos___left'>
 
-                    <h1 className='housingForm__generalInfos__title'>{title}</h1>
-                    <address className='housingForm__generalInfos__address'>{location}</address>
+                    <h1 className='housingForm__generalInfos__title'>
+                        {title}</h1>
+                    <address className='housingForm__generalInfos__address'>
+                        {location}</address>
+
                     <div className='housingForm__generalInfos__tagContainer'>
                         {
                             tags &&
@@ -33,8 +41,12 @@ const HousingGeneralInfos = ({ selectedApartment }) => {
 
                 </div>
 
+
+                {/*--------------This is the RIGHT PART of general informations in the page--------------*/}
                 <div className='housingForm__generalInfos__right'>
+
                     <div className='housingForm__generalInfos__nameAndPic'>
+
                         <p className='housingForm__generalInfos__name'>
                             {firstName}<br />{lastName}</p>
 
@@ -42,7 +54,10 @@ const HousingGeneralInfos = ({ selectedApartment }) => {
                             <img className='housingForm__generalInfos__profilePic'
                                 src={hostPicture} alt={firstName + " " + lastName} />
                         </div>
+
                     </div>
+
+
                     <Stars fullStars={fullStars} />
 
                 </div>

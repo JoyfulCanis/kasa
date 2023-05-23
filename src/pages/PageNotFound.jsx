@@ -1,8 +1,13 @@
 import React from 'react';
-import Header from '../components/Header';
 import { NavLink } from 'react-router-dom';
+
+
+//?components import
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 
+
+//Speaks for itself
 const PageNotFound = () => {
     return (
         <div >

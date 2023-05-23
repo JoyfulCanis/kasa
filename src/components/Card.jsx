@@ -1,8 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+
+//This componenent represents a card as showed in home page. props from HomeSection.jsx
 const Card = ({ h2, cover, urlId }) => {
 
+    //this includes the ID that is needed to show the correct information in HousingForm (apartment page)
     const urlLinkCode = `Fiche_Logement/${urlId}`;
     return (
 

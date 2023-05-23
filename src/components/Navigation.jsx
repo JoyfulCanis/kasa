@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 
+
 const Navigation = () => {
     return (
         <nav className='header__navigation'>
@@ -13,7 +14,7 @@ const Navigation = () => {
                 <NavLink to="/About" className={(nav) => (nav.isActive ? "nav-active" : "")}>
                     <li>A Propos</li>
                 </NavLink>
-                
+
             </ul>
 
         </nav>

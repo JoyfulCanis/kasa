@@ -1,8 +1,13 @@
 import React from 'react';
-import Navigation from './Navigation';
 import { NavLink } from 'react-router-dom';
+
+//?components import
+import Navigation from './Navigation';
+//?logo import
 import logo from "../assets/images/icons/logo.svg"
 
+
+//Header for all pages, logo leads to home page
 const Header = () => {
     return (
         <header className='header'>

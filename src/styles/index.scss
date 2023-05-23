@@ -1,9 +1,15 @@
 @import "./settings";
+
+//pages
 @import "./pages/pageNotFound";
+@import "./pages/home";
+@import "./pages/housingForm";
+
+//transversal files
 @import "./components/header";
-@import "./components/homeSection";
 @import "./components/banner";
-@import "./components/aboutList";
 @import "./components/footer";
-@import "./components/housingForm";
-@import "./components/housingGeneralInfos";
+@import "./components/aboutList";
+
+//Optional content
+@import "./components/optionalStyle";

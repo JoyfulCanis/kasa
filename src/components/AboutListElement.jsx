@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
+
+//? display chevron import
 import displayChevron from "../assets/images/icons/display-chevron.svg"
 
-const AboutListElement = ({ title, content, isHousing }) => {
+
+//Lists for ABOUT page and HOUSINGFORM, displaying text on click
+const AboutListElement = ({ title, content }) => {
+
+    //!"title" and "content" may come from HousingForm page or from About page !
 
     const [isButtonActive, setIsButtonActive] = useState(false)
     return (
 
         <li className='aboutList__element'>
+            {/* All this divison is listening for CLICK event, setting "isButtonActive", so it displays the next division*/}
             <div onClick={() => {
                 isButtonActive ? setIsButtonActive(false) : setIsButtonActive(true)
             }} className='aboutList__element__headBox'>
@@ -22,19 +29,23 @@ const AboutListElement = ({ title, content, isHousing }) => {
 
             </div>
 
+            {/* This division is hidden, it is displayed when isButtonActive === true */}
             <div className={`aboutList__element__text ${isButtonActive ? 'aboutList__element__text--visible' : ''}`}>
                 {Array.isArray(content) && content.length > 1 ? (
-                    <ul className="housing__moreInfos__height">
+                    <ul className={`housing__moreInfos__height
+                    ${isButtonActive ? " housingMobileHeight" : ""}
+                    `}>
                         {content.map((element) => (
                             <li key={element}>{element}</li>
                         ))}
                     </ul>
                 ) : (
                     <p className={Array.isArray(content)
-                        ? "housingHeight" :
+                        ? `housingHeight
+                        ${isButtonActive ? "aboutList__element__paragraphText--active housingMobileHeight" : ""}
+                        ` :
                         `aboutList__element__paragraphText 
-                         ${isButtonActive ? "aboutList__element__paragraphText--active" : ""}
-                         ${isHousing ? " housingHeight" : ""}`
+                         ${isButtonActive ? "aboutList__element__paragraphText--active housingMobileHeight" : ""}`
 
                     }>
                         {content}

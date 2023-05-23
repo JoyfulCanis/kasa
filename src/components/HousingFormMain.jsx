@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
+
+
+//?componenets import
 import Carousel from './Carousel';
 import HousingGeneralInfos from './HousingGeneralInfos';
 import HousinsMoreInfos from './HousingMoreInfos';
 
-const HousingFormMain = ({selectedApartment}) => {
 
-    
-
-
+//This includes all <main> content for HousingForm.jsx
+const HousingFormMain = ({ selectedApartment }) => {
     return (
         <main className='housingMain'>
             <section>
-                <Carousel selectedApartment={selectedApartment}/>
+                <Carousel selectedApartment={selectedApartment} />
                 <HousingGeneralInfos selectedApartment={selectedApartment} />
                 <HousinsMoreInfos selectedApartment={selectedApartment} />
-                
+
             </section>
 
         </main>
-        
+
     );
 };
 

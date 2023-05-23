@@ -5,25 +5,30 @@
     padding-top: 40px;
     max-width: 1400px;
     margin: auto;
-    @include mobile-only{
+
+    @include mobile-only {
         padding: 20px 20px 0px 20px;
     }
 
-
+    //----------logo--------
     &__logo {
-        width: 10px;
-        &-img{
-            @include mobile-only{
+
+        &-img {
+            width: 210px;
+
+            @include mobile-only {
                 width: 145px;
             }
         }
 
     }
 
+    //--------------Navigation-------------
     &__navigation {
         width: 280px;
         padding-top: 17px;
-        @include mobile-only{
+
+        @include mobile-only {
             padding-top: 18px;
             width: auto
         }
@@ -35,16 +40,17 @@
             color: $primary-color;
             font-size: 24px;
             font-weight: 500;
-            & a{@include mobile-only{
-                font-size: 12px;
-                padding-left: 10px;
-            }}
+
+            & a {
+                @include mobile-only {
+                    font-size: 12px;
+                    padding-left: 10px;
+                }
+            }
 
         }
     }
 }
-
-
 
 .nav-active {
     text-decoration: underline;

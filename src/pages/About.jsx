@@ -1,9 +1,12 @@
 import React from 'react';
-import Header from '../components/Header';
 import { useLocation } from 'react-router-dom';
+
+//?components import
+import Header from '../components/Header';
 import AboutMain from '../components/AboutMain';
 import Footer from '../components/Footer';
 
+//About page
 const About = () => {
 
     const location = useLocation();
@@ -13,7 +16,7 @@ const About = () => {
             <Header />
             <AboutMain location={location} />
             <Footer />
-        
+
         </div>
     );
 };

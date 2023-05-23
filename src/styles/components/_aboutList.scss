@@ -11,6 +11,7 @@
         position: relative;
         margin-bottom: 33px;
 
+        //------------------------------TITLE BOX--------------------------
         &__headBox {
             position: relative;
             padding: 8px 18px 8px 18px;
@@ -34,6 +35,7 @@
             }
         }
 
+        //----------display-chevron------
         &__button {
             background-color: rgba($color: $primary-color, $alpha: 0);
             border: none;
@@ -47,7 +49,7 @@
 
         }
 
-
+        //----------text-content--------
         &__text {
             margin-top: -60px;
             overflow: hidden;
@@ -76,6 +78,7 @@
 
         }
 
+        //specific selection for smooth animation
         &__paragraphText {
             max-height: 0;
             opacity: 0;

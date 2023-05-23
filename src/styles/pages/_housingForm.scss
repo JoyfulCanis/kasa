@@ -1,0 +1,284 @@
+//-------------------------------------HOUSING----MAIN-------------------
+
+.housingMain {
+    @include mainPadding;
+    @include verticalFlex;
+    justify-content: center;
+    max-width: 1440px;
+    margin: auto;
+    margin-top: 20px;
+
+    @include mobile-only {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    //-----------------------------CAROUSEL SETTINGS----------------------------------
+    &__imgContainer {
+        position: relative;
+        height: 415px;
+
+        @include mobile-only {
+            height: 255px;
+        }
+
+    }
+
+    &__img {
+        position: absolute;
+        border-radius: 25px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        transition: 2s;
+    }
+
+    //---------CHEVRONS---------
+    &__chevron--left,
+    &__chevron--right {
+        position: absolute;
+        z-index: 2;
+        bottom: 180px;
+        cursor: pointer;
+        background: rgba($color: #000000, $alpha: 0);
+        border: none;
+
+        @include mobile-only {
+            bottom: 116px;
+        }
+    }
+
+    &__chevron--left {
+        left: 23px;
+    }
+
+    &__chevron--right {
+
+        transform: rotate(180deg);
+        right: 23px;
+    }
+
+    &__chevron-img {
+        height: 80px;
+
+        @include mobile-only {
+            height: 20px;
+        }
+    }
+
+
+    //------IMG COUNTER---------
+    &__imgIndex {
+        position: absolute;
+        z-index: 2;
+        bottom: 25px;
+        left: 49%;
+        color: white;
+    }
+}
+
+
+
+
+
+
+
+//------------------------------------------------------------GENERAL-----INFORMATION------------------------------------
+.housingForm__generalInfos {
+    @include horizontalFlex;
+    justify-content: space-between;
+    margin-top: 24px;
+    color: $primary-color;
+
+    @include mobile-only {
+        @include verticalFlex;
+    }
+
+    //-------------------LEFT BLOCK-------------------
+    &__left {
+        @include verticalFlex;
+
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 500;
+
+        @include mobile-only {
+            font-size: 18px;
+        }
+    }
+
+    &__address {
+        font-style: normal;
+
+        @include mobile-only {
+            font-size: 14px
+        }
+    }
+
+    //-------------TAGS--------------
+    &__tagContainer {
+        @include horizontalFlex;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    &__tag {
+        margin-right: 10px;
+        color: $background-color;
+        background: $primary-color;
+        min-width: 115px;
+        padding: 3px 8px 3px 8px;
+        text-align: center;
+        height: 25px;
+        border-radius: 10px;
+        font-size: 14px;
+        margin-bottom: 5px;
+
+        @include mobile-only {
+            height: 18px;
+            font-size: 10px;
+            border-radius: 5px;
+        }
+    }
+
+
+    // -----------------------RIGHT BLOCK---------------------
+    &__right {
+        @include verticalFlex;
+        position: relative;
+
+        @include mobile-only {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin-left: 0;
+        }
+    }
+
+    //-------------------name and pic------------
+    &__nameAndPic {
+        @include horizontalFlex;
+        margin-left: 80px;
+
+        @include mobile-only {
+            margin-top: 5px;
+            margin-left: 0;
+        }
+    }
+
+    &__name {
+        text-align: right;
+        padding-right: 10px;
+        padding-top: 10px;
+        font-size: 18px;
+
+        @include mobile-only {
+            font-size: 12px;
+        }
+    }
+
+    &__profilePicContainer {
+
+        border-radius: 36px;
+        min-width: 64px;
+        height: 64px;
+        overflow: hidden;
+
+        @include mobile-only {
+            height: 32.01px;
+            min-width: 32.01px;
+            margin-top: 10px;
+        }
+    }
+
+    &__profilePic {
+
+        width: 100%;
+        height: 100%;
+    }
+
+    //----------Stars--------
+
+
+    &__tagsAndStars {
+        @include horizontalFlex;
+        justify-content: space-between;
+    }
+
+    &__starsContainer {
+        margin-top: 27px;
+        @include horizontalFlex;
+        flex-wrap: nowrap;
+    }
+}
+
+.star {
+    margin-left: 15px;
+
+    @include mobile-only {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+//-----------------------------------MORE--INFORMATION---------------------------------------
+.housing__moreInfos {
+    @include horizontalFlex;
+    justify-content: space-between;
+    margin-top: 24px;
+
+    @include mobile-only {
+        flex-direction: column;
+    }
+
+    //-----specific settings for AboutListElement.jsx----
+
+    //li represents "Description" and "Equipements"
+    &>li {
+        width: 45%;
+
+        @include mobile-only {
+            width: 100%;
+        }
+
+        //this represents text content
+        &>div {
+            font-size: 18px;
+
+            @include mobile-only {
+                font-size: 12px;
+            }
+
+        }
+    }
+
+    //height of list elements
+    &__height {
+        height: 209px;
+
+        @include mobile-only {
+            height: auto;
+            display: none;
+        }
+    }
+}
+
+//height of list elements in HousingForm.jsx
+.housingHeight {
+    height: 209px;
+
+    @include mobile-only {
+        height: auto;
+        display: none;
+    }
+
+}
+
+//Activated display chevron
+.housingMobileHeight {
+    @include mobile-only {
+        display: block;
+    }
+}

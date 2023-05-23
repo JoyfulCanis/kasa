@@ -1,5 +1,4 @@
-
-.banner{
+.banner {
     border-radius: 16px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,34 +8,35 @@
     position: relative;
     z-index: 0;
     margin-top: 62px;
-    
+
 }
-.banner__{
+
+//------home-page-banner--------
+.banner__ {
     background-image: url("../../../public/banner-home.jpg");
-    background-position-y:-320px;
-    @include mobile-only{
+    background-position-y: -320px;
+
+    @include mobile-only {
         height: 111px;
-        margin-top:0;
+        margin-top: 0;
+        background-position-y:-400px ;
+        background-position-x: -280px;
     }
 }
 
-.banner__about{
+//---------about-page-banner--------
+.banner__about {
     background-image: url("../../../public/banner-about.jpg");
-    background-position-y: -200px;
-  
+    background-position-y: -180px;
+
+
+
 }
 
-.homeMain {
-    @include mainPadding;
-    @include verticalFlex;
-    justify-content: center;
-    max-width: 1440px;
-    margin: auto;
-    @include mobile-only{
-        padding: 20px;
-    }
 
-    &--darken{
+//-----------filter effect + text if in home page-----------
+.homeMain {
+    &--darken {
         position: absolute;
         background-color: rgba(0, 0, 0, 0.16);
         width: 100%;
@@ -57,8 +57,9 @@
         transform: translate(-50%, -50%);
         width: 60%;
         z-index: 2;
-        @include mobile-only{
-            font-size:24px;
+
+        @include mobile-only {
+            font-size: 24px;
             text-align: left;
         }
     }

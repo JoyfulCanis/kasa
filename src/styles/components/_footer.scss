@@ -1,4 +1,4 @@
-.footer{
+.footer {
 
     width: 100%;
     @include verticalFlex;
@@ -8,17 +8,18 @@
     height: 209px;
     background: black;
 
-    &__logo-img{
+    &__logo-img {
         width: 122px;
     }
 
-    &__text{
+    &__text {
         font-family: $secondary-font;
         margin-top: 28px;
         color: white;
         font-size: 24px;
         font-weight: 400;
-        @include mobile-only{
+
+        @include mobile-only {
             font-size: 12px;
         }
     }
