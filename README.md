@@ -1,4 +1,4 @@
-###Kasa
+#Kasa
 
 Kasa is a peer-to-peer apartment rental website built with React. It provides a platform for individuals to rent out their homes, apartments or other residential spaces to others in need of short-term accommodation.
 
@@ -23,17 +23,23 @@ Ensure you have the following installed on your local machine:
 
 ###Installing
 
-Clone the repo: git clone https://github.com/JoyfulCanis/kasa.git
-Navigate to project directory: cd Kasa
-Install the dependencies: npm install
-Start the local server: npm start
-Open your browser and navigate to: http://localhost:3000
+-Clone the repo: git clone https://github.com/JoyfulCanis/kasa.git
+
+-Navigate to project directory: cd Kasa
+
+-Install the dependencies: npm install
+
+-Start the local server: npm start
+
+-Open your browser and navigate to: http://localhost:3000
 
 
 ##Built With
 
 -[React](https://react.dev/)
+
 -[React Router DOM](https://reactrouter.com/en/main)
+
 -[Create React App](https://create-react-app.dev/)
 
 ##Contributing
